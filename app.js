@@ -17,3 +17,22 @@ console.log(listItems);
 const moreNumbers = Array.from('Hi!');
 const someItems = Array.from(listItems);
 console.log(moreNumbers, someItems);
+
+// Data Can You Store In Arrays
+const hobbies = ['Cooking', 'Sports'];
+const personalData = [30, 'Max', { moreDetail: [] }];
+
+// Nested arrays
+const analyticsData = [
+    [1, 1.6],
+    [-5.4, 2.1]
+];
+
+// Accessing data in a nested array
+for (const data of analyticsData) {
+    for (const dataPoint of data) {
+        console.log(dataPoint);
+    };
+};
+
+console.log(personalData[1]);
