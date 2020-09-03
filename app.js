@@ -1,4 +1,4 @@
-// Creating arrays
+// 185. Creating Arrays
 // const numbers = [1, 2, 3]; // Better performance perspective
 // console.log(numbers);
 
@@ -18,6 +18,7 @@
 // const someItems = Array.from(listItems);
 // console.log(moreNumbers, someItems);
 
+// 186. Which Data Can You Store In Arrays?
 // // Data Can You Store In Arrays
 // const hobbies = ['Cooking', 'Sports'];
 // const personalData = [30, 'Max', { moreDetail: [] }];
@@ -37,24 +38,35 @@
 
 // console.log(personalData[1]);
 
+// 187. push(), pop(), unshift(), shift() - Adding & Removing Elements
 // Adding elements
-const hobbies = ['Sports', 'Cooking'];
-hobbies.push('Reading');
-hobbies.unshift('Coding');
+// const hobbies = ['Sports', 'Cooking'];
+// hobbies.push('Reading');
+// hobbies.unshift('Coding');
 
+// // Removing elements
+// const poppedValue = hobbies.pop();
+// hobbies.shift();
+// console.log(hobbies);
 
-// Removing elements
-const poppedValue = hobbies.pop();
-hobbies.shift();
-console.log(hobbies);
+// hobbies[1] = 'Coding';
+// // hobbies[5] = 'Reading'; // Rarely used
+// console.log(hobbies, hobbies[4]);
 
-hobbies[1] = 'Coding';
-// hobbies[5] = 'Reading'; // Rarely used
-console.log(hobbies, hobbies[4]);
+// // 188. The splice() Method
+// hobbies.splice(1, 0, 'Good Food', 'Orange');
+// console.log(hobbies);
 
-// Splice method
-hobbies.splice(1, 0, 'Good Food', 'Orange');
-console.log(hobbies);
+// const removedElements = hobbies.splice(-1, 1);
+// console.log(hobbies);
 
-const removedElements = hobbies.splice(-1, 1);
-console.log(hobbies);
+// 189. Selecting ranges & creating copies with slice()
+const testResults = [1, 5.2, 1.4, 10.98, -5, 8];
+// const storedResults = testResults.slice(); // Copying array
+// const storedResults = testResults.slice(0, 2); // Selecting ranges
+// const storedResults = testResults.slice(-3, -1); // Selecting ranges with negative index
+const storedResults = testResults.slice(2); // Selecting ranges with only the start index
+
+testResults.push(5.91);
+
+console.log(storedResults, testResults);
