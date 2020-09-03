@@ -51,3 +51,10 @@ console.log(hobbies);
 hobbies[1] = 'Coding';
 // hobbies[5] = 'Reading'; // Rarely used
 console.log(hobbies, hobbies[4]);
+
+// Splice method
+hobbies.splice(1, 0, 'Good Food', 'Orange');
+console.log(hobbies);
+
+const removedElements = hobbies.splice(-1, 1);
+console.log(hobbies);
