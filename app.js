@@ -61,7 +61,7 @@
 // console.log(hobbies);
 
 // 189. Selecting ranges & creating copies with slice()
-const testResults = [1, 5.2, 1.4, 10.98, -5, 8];
+const testResults = [1, 5.2, 1.4, 10.98, 1.4, -5, 8];
 // const storedResults = testResults.slice(); // Copying array
 // const storedResults = testResults.slice(0, 2); // Selecting ranges
 // const storedResults = testResults.slice(-3, -1); // Selecting ranges with negative index
@@ -74,3 +74,9 @@ const storedResults = testResults.concat([3.99, 2]);
 testResults.push(5.91);
 
 console.log(storedResults, testResults);
+
+// 191. Retrieving indexes with indexOf() /& lastIndexOf()
+console.log(testResults.lastIndexOf(1.4));
+
+const personData = [{ name: 'Max' }, { name: 'Manuel' }];
+console.log(personData.indexOf({ name: 'Manuel' }));
