@@ -65,7 +65,11 @@ const testResults = [1, 5.2, 1.4, 10.98, -5, 8];
 // const storedResults = testResults.slice(); // Copying array
 // const storedResults = testResults.slice(0, 2); // Selecting ranges
 // const storedResults = testResults.slice(-3, -1); // Selecting ranges with negative index
-const storedResults = testResults.slice(2); // Selecting ranges with only the start index
+// const storedResults = testResults.slice(2); // Selecting ranges with only the start index
+
+// 190. Adding arrays to arrays with concat()
+const storedResults = testResults.concat([3.99, 2]);
+
 
 testResults.push(5.91);
 
