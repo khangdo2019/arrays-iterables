@@ -61,41 +61,58 @@
 // console.log(hobbies);
 
 // 189. Selecting ranges & creating copies with slice()
-const testResults = [1, 5.2, 1.4, 10.98, 1.4, -5, 8];
-// const storedResults = testResults.slice(); // Copying array
-// const storedResults = testResults.slice(0, 2); // Selecting ranges
-// const storedResults = testResults.slice(-3, -1); // Selecting ranges with negative index
-// const storedResults = testResults.slice(2); // Selecting ranges with only the start index
+// const testResults = [1, 5.2, 1.4, 10.98, 1.4, -5, 8];
+// // const storedResults = testResults.slice(); // Copying array
+// // const storedResults = testResults.slice(0, 2); // Selecting ranges
+// // const storedResults = testResults.slice(-3, -1); // Selecting ranges with negative index
+// // const storedResults = testResults.slice(2); // Selecting ranges with only the start index
 
-// 190. Adding arrays to arrays with concat()
-const storedResults = testResults.concat([3.99, 2]);
+// // 190. Adding arrays to arrays with concat()
+// const storedResults = testResults.concat([3.99, 2]);
 
 
-testResults.push(5.91);
+// testResults.push(5.91);
 
-console.log(storedResults, testResults);
+// console.log(storedResults, testResults);
 
-// 191. Retrieving indexes with indexOf() /& lastIndexOf()
-console.log(testResults.lastIndexOf(1.4));
+// // 191. Retrieving indexes with indexOf() /& lastIndexOf()
+// console.log(testResults.lastIndexOf(1.4));
 
-const personData = [{ name: 'Max' }, { name: 'Manuel' }];
-console.log(personData.indexOf({ name: 'Manuel' }));
+// const personData = [{ name: 'Max' }, { name: 'Manuel' }];
+// console.log(personData.indexOf({ name: 'Manuel' }));
 
-// 192. Finding Stuff: find() & findIndex()
-const manuel = personData.find((person, idx, persons) => {
-    return person.name === "Manuel";
+// // 192. Finding Stuff: find() & findIndex()
+// const manuel = personData.find((person, idx, persons) => {
+//     return person.name === "Manuel";
+// });
+
+// manuel.name = 'Anna';
+
+// console.log(manuel, personData);
+
+// const maxIndex = personData.findIndex((person, idx, persons) => {
+//     return person.name === 'Max';
+// });
+
+// console.log(maxIndex);
+
+// // 193. Is It Included?
+// console.log(testResults.includes(10.98)); // ==> true
+// console.log(testResults.indexOf(10.98) !== -1); // Check whether value is exist or not
+
+// 194. Alternative to for Loops: The forEach() Method
+const prices = [10.99, 5.99, 3.99, 6.59];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+// Regular for-of loop
+// for (const price of prices) {
+//     taxAdjustedPrices.push(price * (1 + tax));
+// };
+
+prices.forEach((price, idx, prices) => {
+    const priceObj = { index: idx, taxAdjustedPrices: price * (1 + tax) };
+    taxAdjustedPrices.push(priceObj);
 });
 
-manuel.name = 'Anna';
-
-console.log(manuel, personData);
-
-const maxIndex = personData.findIndex((person, idx, persons) => {
-    return person.name === 'Max';
-});
-
-console.log(maxIndex);
-
-// 193. Is It Included?
-console.log(testResults.includes(10.98)); // ==> true
-console.log(testResults.indexOf(10.98) !== -1); // Check whether value is exist or not
+console.log(taxAdjustedPrices);
