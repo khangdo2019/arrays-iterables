@@ -95,3 +95,7 @@ const maxIndex = personData.findIndex((person, idx, persons) => {
 });
 
 console.log(maxIndex);
+
+// 193. Is It Included?
+console.log(testResults.includes(10.98)); // ==> true
+console.log(testResults.indexOf(10.98) !== -1); // Check whether value is exist or not
