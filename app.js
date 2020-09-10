@@ -101,18 +101,30 @@
 // console.log(testResults.indexOf(10.98) !== -1); // Check whether value is exist or not
 
 // 194. Alternative to for Loops: The forEach() Method
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
+// const taxAdjustedPrices = [];
+
+// // Regular for-of loop
+// // for (const price of prices) {
+// //     taxAdjustedPrices.push(price * (1 + tax));
+// // };
+
+// // Using forEach() method
+// prices.forEach((price, idx, prices) => {
+//     const priceObj = { index: idx, taxAdjustedPrices: price * (1 + tax) };
+//     taxAdjustedPrices.push(priceObj);
+// });
+
+// console.log(taxAdjustedPrices);
+
+// 195. Transforming Data with map()
 const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
-const taxAdjustedPrices = [];
 
-// Regular for-of loop
-// for (const price of prices) {
-//     taxAdjustedPrices.push(price * (1 + tax));
-// };
-
-prices.forEach((price, idx, prices) => {
+const taxAdjustedPrices = prices.map((price, idx, prices) => {
     const priceObj = { index: idx, taxAdjustedPrices: price * (1 + tax) };
-    taxAdjustedPrices.push(priceObj);
+    return priceObj;
 });
 
-console.log(taxAdjustedPrices);
+console.log(prices, taxAdjustedPrices);
