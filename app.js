@@ -128,3 +128,26 @@ const taxAdjustedPrices = prices.map((price, idx, prices) => {
 });
 
 console.log(prices, taxAdjustedPrices);
+
+// 196. sort()ing & reverse()ing
+// const sortedPrices = prices.sort(); ==> (4) [10.99, 3.99, 5.99, 6.59]
+const sortedPrices = prices.sort((a, b) => {
+    if (a > b) {
+        return 1;
+    } else if (a === b) {
+        return 0;
+    } else {
+        return -1;
+    }
+});
+
+console.log(sortedPrices);
+
+console.log(sortedPrices.reverse()); // An alternative to reverse a sorted list
+
+// 197. Filtering Arrays & filter()
+const filteredArray = prices.filter((price, index, prices) => {
+    return price > 6; // ==> (2) [10.99, 6.59]
+});
+
+console.log(filteredArray);
