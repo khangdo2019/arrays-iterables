@@ -151,3 +151,8 @@ const filteredArray = prices.filter((price, index, prices) => {
 });
 
 console.log(filteredArray);
+
+// 198. Where Arrow Functions Shine!
+const filteredArrayShorten = prices.filter(p => p > 6); // ==> super short & concise
+
+console.log(filteredArrayShorten);
