@@ -156,3 +156,22 @@ console.log(filteredArray);
 const filteredArrayShorten = prices.filter(p => p > 6); // ==> super short & concise
 
 console.log(filteredArrayShorten);
+
+// 199. The Important reduce() Method
+// Using forEach method to calculate a sum of an array
+// let sum = 0;
+
+// prices.forEach((price) => {
+//     sum += price;
+// });
+
+// console.log(sum);
+
+// const sum = prices.reduce((preValue, curValue, curIndex, prices) => {
+//     return preValue + curValue;
+// }, 0);
+
+// Shorten form
+const sum = prices.reduce((preValue, curValue) => preValue + curValue, 0);
+
+console.log(sum);
